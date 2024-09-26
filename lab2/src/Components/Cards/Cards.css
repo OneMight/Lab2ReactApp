@@ -1,0 +1,51 @@
+.imagewidth{
+    width: 300px;
+}
+
+.title-card{
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.price{
+    font-size: 16px;
+    margin: 0;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    width: auto;
+    gap: 16px;
+    height: 450px;
+}
+.slider-images{
+    z-index: 1;
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 300px;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    width: auto;
+    gap: 16px;
+    height: 450px;
+}
+.container-slider{
+
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}

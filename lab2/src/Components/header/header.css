@@ -1,0 +1,217 @@
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px 0;
+    background-color:#FCF8F3;
+    position: relative;
+}
+#logo{
+    content:url("../../images/logo.svg");
+    cursor:pointer;
+}
+nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+
+nav > a{
+    display: flex;
+    text-decoration: none;
+    align-items:center;
+    color: #000000;
+}
+
+#checkusers{
+    display: none;
+}
+.nav_menu{
+    display: flex;
+    width: 50%;
+    align-items:center;
+    justify-content: start;
+    flex-direction: row;
+}
+.header-right{
+    margin-right: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width:20%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 36px;
+}
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.header-right{
+    margin-right: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width:20%;
+}
+
+.username{
+    display: none;
+    font-size: 20px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#Sign-up {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+
+#logout{
+    display: none;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+#translate {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+
+#Log-in {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+.basket{
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+}
+
+#menu_toogle{
+    right: 20px;
+    position: absolute;
+    opacity: 0;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        margin: 0;
+        overflow-x: hidden;
+    }
+    
+    .burger-menu{
+        z-index: 4;
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50px;
+        justify-content: space-between;
+        transition: 0.2s all;
+        flex-direction: column;
+        gap: 10px;
+        background-color:#212806;
+        font-size: 20px;
+        color:white;
+    }
+    
+    .username{
+        display: none;
+        font-size: 20px;
+        margin: 0;
+        margin-right: 20px;
+    }
+    
+    #burgerlogout{
+        color:white;
+        justify-content: center;
+        text-align: center;
+        background-color: #AAB9CF;
+        width: 90%;
+        padding: 10px 0;
+        display: none;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid  #AAB9CF;
+        border-radius: 10px;
+    }
+    
+    .logout{
+        text-align: center;
+    }
+    
+    .log{
+        margin-top: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+    
+    #burgerSign{
+        color:white;
+        display: block;
+        text-align: center;
+        background-color: #AAB9CF;
+        width: 45%;
+        padding: 10px 0;
+        text-decoration: none;
+        border: 1px solid  #AAB9CF;
+        border-radius: 10px;
+    }
+    
+    .theme{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
