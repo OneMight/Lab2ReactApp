@@ -6,7 +6,9 @@ import imag5 from '../../images/imag5.png';
 import imag6 from '../../images/imag6.png';
 import './Cards.css';
 
-export default function Cards(){
+export default function Cards(props){
+
+   
     const arrayPhotos =[
         {title:'Dogs', image:imag1, price: '$10.00', id: 1},
         {title:'North American Birds', image:imag2, price: '$11.00', id: 2},
@@ -17,8 +19,8 @@ export default function Cards(){
     ];
 
     return(
-        <div className="container-slider">
-            <div className='slider-images'>
+        <div className="Container-for-cards">
+            <div className='Container-for-images'>
                 {arrayPhotos.map( photos =>(
                     
                     <div className="images" key={photos.id}>
@@ -27,6 +29,8 @@ export default function Cards(){
                             {photos.title}
                         </p>
                         <p className="price">{photos.price}</p>
+                        <button className='button-in-card AddToBasket' onClick={props.setcountofproduct}>Add to basket</button>
+                        
                     </div>
             ) ) }
             </div>

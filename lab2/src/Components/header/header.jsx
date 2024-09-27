@@ -1,19 +1,20 @@
 import './header.css';
-import logo from '../../images/logo.png';
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import App from '../../App';
+
+
 import Navmenu from '../Navmenu/navmenu.jsx';
+import search from '../../images/search.svg';
+import shoping from '../../images/shoping.svg';
+import { Link } from 'react-router-dom';
 
-export default function Header(){
 
+export default function Header({count}){
+  
     return(
         <>
        <header>
-            <a href="index.html">
-              <div id="logo" />
-            </a>
+            <Link to='/'>
+              <div id="logo"/>
+            </Link>
             <div className="nav_menu">
              <Navmenu/>
             </div>
@@ -49,13 +50,15 @@ export default function Header(){
                 </span>
               </button>
               <div>
-                <img className="search-photo" src="../images/search.svg" alt="" />
+                <img className="search-photo" src={search} alt="" />
               </div>
               <div className="basket">
-                <div>
-                  <img className="shoping" src="../images/shoping.svg" alt="" />
-                </div>
-                <p>0</p>
+                <Link to='/basket'>
+                  <img className="shoping" src={shoping} alt="" />
+                </Link>
+                  
+                
+                <p>{count}</p>
                 <p></p>
               </div>
             </div>
@@ -94,7 +97,11 @@ export default function Header(){
               <div className="theme"></div>
             </div>
           </header>
+
+          
         </>
+
+        
     )
   
 }

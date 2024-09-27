@@ -20,7 +20,7 @@
     gap: 16px;
     height: 450px;
 }
-.slider-images{
+.Container-for-images{
     z-index: 1;
     display: flex;
     width: 95%;
@@ -28,6 +28,17 @@
     flex-wrap: wrap;
     justify-content: space-around;
     column-gap: 300px;
+    row-gap: 20px;
+}
+.button-in-card{
+    width: 150px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #FCF8F3;
+    border: 1px solid #ead4ba;
+    border-radius: 20px;
+    padding: 5px 0;
+    cursor: pointer;
 }
 .images{
     display: flex;
@@ -38,7 +49,7 @@
     gap: 16px;
     height: 450px;
 }
-.container-slider{
+.Container-for-cards{
 
     width: 100%;
     padding: 5% 0;
