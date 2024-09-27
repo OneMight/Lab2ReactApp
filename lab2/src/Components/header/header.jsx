@@ -5,7 +5,7 @@ import Navmenu from '../Navmenu/navmenu.jsx';
 import search from '../../images/search.svg';
 import shoping from '../../images/shoping.svg';
 import { Link } from 'react-router-dom';
-
+import Popup from 'reactjs-popup';
 
 export default function Header({count}){
   
@@ -53,13 +53,28 @@ export default function Header({count}){
                 <img className="search-photo" src={search} alt="" />
               </div>
               <div className="basket">
-                <Link to='/basket'>
+                <Popup trigger={
+                  <button className='profile-open-button'>
                   <img className="shoping" src={shoping} alt="" />
-                </Link>
-                  
+                </button>
+                } position={'bottom center'}>
+                  <div className='Profile-container'>
+                    <p>Количество покупок {count}</p>
+                    <button className='Lets-basket buttons-modal'>Перейти в корзину</button>
+                    <Popup trigger={<button className='buttons-modal Exit-button'>Выйти</button>} modal nested>{
+                        close=>(
+                          <div className='Modal-exit'>
+                            <p>Вы точно хотите выйти?</p>
+                            <button className='Confirm' onClick={()=> close()}>Да</button>
+                          </div>
+                        )
+                      }
+
+                    </Popup>
+                    
+                  </div>
+                </Popup>
                 
-                <p>{count}</p>
-                <p></p>
               </div>
             </div>
             <input type="checkbox" id="menu_toogle" />

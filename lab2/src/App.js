@@ -17,6 +17,8 @@ export default function App(){
       
       setproductCount(i--);
   }
+
+
   return(
     <>
 
@@ -25,7 +27,7 @@ export default function App(){
       <Routes>
         <Route path='/shop' element={<Shop count ={productCount} setcountofproduct={setcountofproduct}/>}/>
         <Route path='/' element={<Main count ={productCount}/>}/>
-        <Route path='/basket' element={<Basket count ={productCount}/>}/>
+       
      </Routes>
     </BrowserRouter>
     </>
