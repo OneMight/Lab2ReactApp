@@ -1,0 +1,57 @@
+[
+    {
+        "title":"Dogs",
+        "image":"/images/imag1.png",
+        "price": "$10.00",
+        "id": 1
+    },
+
+    {
+        "title":"North American Birds",
+        "image":"/images/imag2.png",
+        "price":"$11.00",
+        "id": 2
+    },
+    {
+        "title":"New York, London, Paris",
+        "image":"/images/imag3.png",
+        "price": "$12.00",
+        "id": 3
+    },
+    {
+        "title":"Unicorns",
+        "image":"/images/imag4.png",
+        "price": "$13.00",
+        "id": 4
+    },
+    {   
+        "title":"Ocean Life",
+        "image":"/images/imag5.png",
+        "price": "$14.00",
+        "id": 5
+    },
+    {
+        "title":"Sunflowers",
+        "image":"/images/imag6.png",
+        "price": "$15.00",
+        "id": 6
+    },
+    {
+        "title":"Ocean Life",
+        "image":"/images/imag7.png",
+        "price": "$15.00",
+        "id": 7
+    },
+    {
+        "title":"Cats",
+        "image":"/images/imag8.png",
+        "price": "$15.00",
+        "id": 8
+    },
+    {
+        "title":"Grand Canyon, Yosemite, Arches National Park",
+        "image":"/images/imag9.png",
+        "price": "$15.00",
+        "id": 9
+    }
+]

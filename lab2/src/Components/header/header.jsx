@@ -60,7 +60,9 @@ export default function Header({count}){
                 } position={'bottom center'}>
                   <div className='Profile-container'>
                     <p>Количество покупок {count}</p>
+                    <Link to='/rewrite'>
                     <button className='Lets-basket buttons-modal'>Перейти в корзину</button>
+                    </Link>
                     <Popup trigger={<button className='buttons-modal Exit-button'>Выйти</button>} modal nested>{
                         close=>(
                           <div className='Modal-exit'>
@@ -69,12 +71,9 @@ export default function Header({count}){
                           </div>
                         )
                       }
-
                     </Popup>
-                    
                   </div>
-                </Popup>
-                
+                </Popup>   
               </div>
             </div>
             <input type="checkbox" id="menu_toogle" />
@@ -112,13 +111,8 @@ export default function Header({count}){
               <div className="theme"></div>
             </div>
           </header>
-
-          
         </>
-
-        
     )
-  
 }
 
 

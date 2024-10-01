@@ -11,10 +11,10 @@ export default function Navmenu(){
                         <p i18n="shop" >Shop</p>
                         <img src={mark} alt=""/>
                     </Link>
-                    <a id="about" href="../Read article/ReadArticle.html">
+                    <Link id="about" to='/rewrite'>
                         <p i18n ="about">About</p>
                         <img src={mark} alt=""/>
-                    </a>
+                    </Link>
                     <a id="sustainability" href="../Questions/Questions.html">
                         <p i18n ="sustainability">Sustainability</p>
                     </a>
