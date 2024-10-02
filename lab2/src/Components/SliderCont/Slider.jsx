@@ -75,25 +75,25 @@ export default function Slider(){
 
     return(
         
-        <div class="container-cards box unauthotized">
-        <div class="text-and-button box">
+        <div className="container-cards box unauthotized">
+        <div className="text-and-button box">
                 <div>
-                    <p i18n="ourBestSellers" class="title-contaner i18n "> Our Best Sellers</p>
-                    <p i18n="deliverASmile" class="text-title i18n ">
+                    <p className="title-contaner "> Our Best Sellers</p>
+                    <p className="text-title ">
                         Deliver a smile to yourself or someone special
                         with one of our sustainable favorites.
                     </p>
                 </div>
                 
                 <Link to='/shop' id="shop-all">
-                    <span i18n="shopAllProducts" class="i18n shopAllProducts">Shop all products</span> 
+                    <span className=" shopAllProducts">Shop all products</span> 
                     <img src="../images/row.svg" alt=""/>
                 </Link>
                
                 
             </div>
-        <div class="container-slider">
-                <div class="Arrows ">
+        <div className="container-slider">
+                <div className="Arrows ">
                     <button id="arrow-left">
                         <img src="/images/rowleft.png" alt=""/>
                     </button>
@@ -102,7 +102,7 @@ export default function Slider(){
                     </button>
                 </div>
                
-                <div class="slider-images">
+                <div className="slider-images">
 
                     {ArrayCards.map( photos =>(
                     

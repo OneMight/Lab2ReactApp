@@ -62,11 +62,11 @@
     z-index: 2;
 }
 
-.AddToBasket:hover{
+.delete-Button:hover{
     background-color: #b6b4b1;
 }
 
 
-.AddToBasket:active{
+.delete-Button:active{
     background-color: #ffffff;
 }

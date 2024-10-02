@@ -2,8 +2,7 @@ import './header.css';
 
 
 import Navmenu from '../Navmenu/navmenu.jsx';
-import search from '../../images/search.svg';
-import shoping from '../../images/shoping.svg';
+
 import { Link } from 'react-router-dom';
 import Popup from 'reactjs-popup';
 
@@ -13,7 +12,8 @@ export default function Header({count}){
         <>
        <header>
             <Link to='/'>
-              <div id="logo"/>
+              {/* <div id="logo"/> */}
+              <img id='logo' src="/images/logo.png" alt="" />
             </Link>
             <div className="nav_menu">
              <Navmenu/>
@@ -50,17 +50,17 @@ export default function Header({count}){
                 </span>
               </button>
               <div>
-                <img className="search-photo" src={search} alt="" />
+                <img className="search-photo" src='/images/search.svg' alt="" />
               </div>
               <div className="basket">
                 <Popup trigger={
                   <button className='profile-open-button'>
-                  <img className="shoping" src={shoping} alt="" />
+                  <img className="shoping" src='/images/shoping.svg' alt="" />
                 </button>
                 } position={'bottom center'}>
                   <div className='Profile-container'>
                     <p>Количество покупок {count}</p>
-                    <Link to='/rewrite'>
+                    <Link to='/basket'>
                     <button className='Lets-basket buttons-modal'>Перейти в корзину</button>
                     </Link>
                     <Popup trigger={<button className='buttons-modal Exit-button'>Выйти</button>} modal nested>{

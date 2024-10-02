@@ -1,4 +1,4 @@
-import mark from '../../images/mark.svg'
+
 import { Link } from "react-router-dom";
 
 export default function Navmenu(){
@@ -9,11 +9,11 @@ export default function Navmenu(){
             <nav>
                     <Link id="shop" to="/shop">
                         <p i18n="shop" >Shop</p>
-                        <img src={mark} alt=""/>
+                        <img src='/images/mark.svg' alt=""/>
                     </Link>
-                    <Link id="about" to='/rewrite'>
-                        <p i18n ="about">About</p>
-                        <img src={mark} alt=""/>
+                    <Link id="about" to='/basket'>
+                        <p i18n ="about">Basket</p>
+                        <img src='/images/mark.svg' alt=""/>
                     </Link>
                     <a id="sustainability" href="../Questions/Questions.html">
                         <p i18n ="sustainability">Sustainability</p>

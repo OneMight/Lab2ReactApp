@@ -9,7 +9,7 @@ header{
     position: relative;
 }
 #logo{
-    content:url('../../images/logo.png');
+    /* content:url('/images/logo.png'); */
     cursor:pointer;
     width: 40px;
     height: 40px;
@@ -220,7 +220,7 @@ nav > a{
 
     .slider:before {
         position: absolute;
-        content:url("../../images/Sun.png");
+        /* content:url("/images/Sun.png"); */
         height: 26px;
         width: 26px;
         left: 4px;
@@ -240,7 +240,7 @@ nav > a{
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
         transform: translateX(26px);
-        content:url("../../images/moon.png");
+        /* content:url("/images/moon.png"); */
       }
       
     

@@ -3,9 +3,11 @@ import './footer.css'
 export default function Footer(){
     return(
         <footer>
-            <div class="container-footer">
-                <div class="links">
-                    <div class="logo-footer"></div>
+            <div className="container-footer">
+                <div className="links">
+                    <div className="logo-footer">
+                        <img src="./images/logowhite.png" alt="" />
+                    </div>
                     <div>
                         <div>
                             <a href="tel:+375257325957">+375257325957</a>
@@ -16,7 +18,7 @@ export default function Footer(){
                     </div>
                 </div>
               
-                <div class="footer-nav-menu">
+                <div className="footer-nav-menu">
                     <div>
                         <p i18n="grandCanyonYosemiteArches34">Shop</p>
                         <a i18n="grandCanyonYosemiteArches26" href="../Shop/shopall.html">Shop all</a>
@@ -29,27 +31,27 @@ export default function Footer(){
                         <a i18n="grandCanyonYosemiteArches30" href="" >Our story</a>
                         <a i18n="grandCanyonYosemiteArches31" href="" >Our Values</a>
                         <a i18n="grandCanyonYosemiteArches32" href="">Journal</a>
-                        <a i18n="grandCanyonYosemiteArches33" href="../Questions/Questions.html">Sustainability</a>
+                        <a i18n="grandCanyonYosemiteArches33" href="">Sustainability</a>
                     </div>
                     <div>
                         <p i18n="grandCanyonYosemiteArches36" >Customer Care</p>
-                        <a i18n="grandCanyonYosemiteArches37" href="../Read article/ReadArticle.html">About Us</a>
+                        <a i18n="grandCanyonYosemiteArches37" href="">About Us</a>
                         <a i18n="grandCanyonYosemiteArches38" href="">FAQs</a>
                         <a i18n="grandCanyonYosemiteArches39" href="">Return & Exchanges</a>
                         <a i18n="grandCanyonYosemiteArches40" href="">Support</a>
                     </div>
                     <div>
-                        <p i18n="grandCanyonYosemiteArches41" class="i18n ">Wholesales</p>
+                        <p i18n="grandCanyonYosemiteArches41">Wholesales</p>
                         <a i18n="grandCanyonYosemiteArches42" href="">Overview</a>
                         <a i18n="grandCanyonYosemiteArches43" href="">Register as a Wholesales</a>
                         <a i18n="grandCanyonYosemiteArches44" href="">Access the Wholesales Store</a>
                     </div>
                 </div>
-                <div class="footer-links">
+                <div className="footer-links">
                    <span i18n="grandCanyonYosemiteArches45">© 2021 Twigs Paper. All Rights Reserved.</span>
                     <div>
-                        <a i18n="grandCanyonYosemiteArches46" href="../Privacy/privacy.html">Privacy Policy</a>
-                        <a i18n="grandCanyonYosemiteArches47" href="../Privacy/privacy.html">Terms & Conditions</a>
+                        <a i18n="grandCanyonYosemiteArches46" href="">Privacy Policy</a>
+                        <a i18n="grandCanyonYosemiteArches47" href="">Terms & Conditions</a>
                     </div>
                    <span i18n="grandCanyonYosemiteArches48">Built by The Papestielliz</span>
                 </div>

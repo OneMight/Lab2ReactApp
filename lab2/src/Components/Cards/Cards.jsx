@@ -1,36 +1,34 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
 
-export default function Cards(props){
-const [ArrayCards, setArray] = useState([]);
+export default function Cards({ addToBasket }) {
+    const [arrayCards, setArray] = useState([]);
 
-useEffect(() => {
-    const fetchCards = async () => {
+    useEffect(() => {
+        const fetchCards = async () => {
             const response = await fetch('/Cards.json');
             const result = await response.json();
             setArray(result);
-      
-    };
+        };
 
-    fetchCards();
-}, []);
+        fetchCards();
+    }, []);
 
-    return(
+    return (
         <div className="Container-for-cards">
             <div className='Container-for-images'>
-                {ArrayCards.map( photos =>(
-                    
-                    <div className="images" key={photos.id}>
-                        <img src={photos.image} className='imagewidth' alt=""/>
-                        <p className="title-card">
-                            {photos.title}
-                        </p>
-                        <p className="price">{photos.price}</p>
-                        <button className='button-in-card AddToBasket' onClick={props.setcountofproduct}>Add to basket</button>
-                   
+                {arrayCards.map(photo => (
+                    <div className="images" key={photo.id}>
+                        <img src={photo.image} className='imagewidth' alt="" />
+                        <p className="title-card">{photo.title}</p>
+                        <p className="price">{photo.price}</p>
+                        <button className='button-in-card AddToBasket'
+                            onClick={() => addToBasket(photo.id,photo.image, photo.title, photo.price)}>
+                            Add to basket
+                        </button>
                     </div>
-            ) ) }
+                ))}
             </div>
         </div>
-    )
+    );
 }
