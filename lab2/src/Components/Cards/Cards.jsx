@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
-
+import Popup from 'reactjs-popup';
 export default function Cards({ addToBasket }) {
     const [arrayCards, setArray] = useState([]);
+    const [titleinput, settitle] = useState('');
+    const [priceinput, setprice] = useState('');
+    const [imageinput, setimage] = useState('');
 
     useEffect(() => {
         const fetchCards = async () => {
@@ -12,8 +15,29 @@ export default function Cards({ addToBasket }) {
         };
 
         fetchCards();
-    }, []);
 
+       
+    }, []);
+    const UpdateCard = (id,newtitle,newprice, newimage) =>{
+            
+        setArray((prevState) =>{
+            const idx = prevState.findIndex((item) => item.id === id);
+            const olditem = prevState[idx];
+            const newItem = {...olditem, title: newtitle, price:newprice, image: newimage};
+            return[...prevState.slice(0,idx),newItem, ...prevState.slice(idx + 1)]
+
+        })
+    }
+    const HandleSetTitleCard =(e) =>{
+        settitle(e.target.value);
+    }
+    const HandleSetPriceCard =(e) =>{
+        setprice(e.target.value);
+    }
+    const HandeSetImageCard = (e) =>{
+        setimage(e.target.value);
+    }
+    
     return (
         <div className="Container-for-cards">
             <div className='Container-for-images'>
@@ -26,6 +50,34 @@ export default function Cards({ addToBasket }) {
                             onClick={() => addToBasket(photo.id,photo.image, photo.title, photo.price)}>
                             Add to basket
                         </button>
+                        <Popup trigger ={<button className='button-in-card open-redact-menu'>Redact</button>} modal nested>{
+                            close=>(
+                                <div className='modal-image'>
+                                    <input type="button" onClick={() => close()}/>
+                                    <div>
+                                        <p>select your image</p>
+                                      <select id="selectimage" onChange={HandeSetImageCard}>
+                                        <option value="/images/imag1.png">1</option>
+                                        <option value="/images/imag2.png">2</option>
+                                        <option value="/images/imag3.png">3</option>
+                                        <option value="/images/imag4.png">4</option>
+                                        <option value="/images/imag5.png">5</option>
+                                        <option value="/images/imag6.png">6</option>
+                                      </select>
+                                    </div>
+                                    <div>
+                                        <p>Write title of the card</p>
+                                        <input type="text" className='modal-input input-title-card' onChange={HandleSetTitleCard}/>
+                                    </div>
+                                    <div>
+                                        <p>Let's set a price</p>
+                                        <input type="text" className='modal-input input-price-card' onChange={HandleSetPriceCard}/>
+                                    </div>
+                                    <input type="button" value='Save' className='Save-card' onClick={() => UpdateCard(photo.id, titleinput, '$'+priceinput, imageinput)}/>                         
+                                </div>
+                            )
+                        }
+                        </Popup>
                     </div>
                 ))}
             </div>

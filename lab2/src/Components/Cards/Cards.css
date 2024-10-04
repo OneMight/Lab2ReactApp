@@ -62,11 +62,66 @@
     z-index: 2;
 }
 
-.AddToBasket:hover{
+.button-in-card:hover{
     background-color: #b6b4b1;
 }
 
 
-.AddToBasket:active{
+.button-in-card:active{
     background-color: #ffffff;
+}
+
+.modal-image{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 0 4px 8px 1000px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-image > div{
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 2px;
+    height: 100px;
+}
+
+.modal-image > div > p{
+    margin-top: 0;
+}
+
+.modal-input{
+    width: 280px;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 30px;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.Save-card{
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 25px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+#selectimage{
+    width: 100px;
+    display: flex;
+    
+    flex-direction: row;
+    text-align: center;
+    height: 20px;
 }

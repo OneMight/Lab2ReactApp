@@ -69,7 +69,7 @@ export default function Header({count}){
                             <p>Вы точно хотите выйти?</p>
                             <button className='Confirm' onClick={()=> close()}>Да</button>
                           </div>
-                        )
+                        ) 
                       }
                     </Popup>
                   </div>

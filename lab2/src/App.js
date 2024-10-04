@@ -18,12 +18,12 @@ export default function App() {
 
    const onHandleDeleteproduct = (id) =>{
     setAddedCards((prevState) =>{
-      const inx = prevState.findIndex((item) => item.id ===id);
-      
-      return [...prevState.slice(0,inx),...prevState.slice(inx + 1)]
+        const inx = prevState.findIndex((item) => item.id ===id);
+        return [...prevState.slice(0,inx),...prevState.slice(inx + 1)]
     });
     deleteCountOfProduct();
-   }
+}
+      
 
     const onHandleAddItem = (id, image, title, price) => {
         const newItem = {id, image, title, price };
