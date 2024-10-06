@@ -1,26 +1,31 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Basket from './Pages/Basket.jsx';
 import Shop from './Pages/ShopCards.jsx';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Main from './Pages/Main.jsx';
 
 export default function App() {
     const [productCount, setProductCount] = useState(0);
     const [addedCards, setAddedCards] = useState([]);
 
+ 
+
     const setCountOfProduct = () => {
         setProductCount((prevState) => prevState + 1);
+ 
     };
 
     const deleteCountOfProduct =() =>{
       setProductCount((prevState) => prevState - 1);
+    
     }
 
    const onHandleDeleteproduct = (id) =>{
-    setAddedCards((prevState) =>{
-        const inx = prevState.findIndex((item) => item.id ===id);
-        return [...prevState.slice(0,inx),...prevState.slice(inx + 1)]
-    });
+    const NewCards = addedCards.filter((Card, index) =>{
+        return index !==id
+    })
+    setAddedCards(NewCards);
+   
     deleteCountOfProduct();
 }
       
@@ -31,6 +36,8 @@ export default function App() {
         setCountOfProduct();
        
     };
+
+  
 
     return (
         <BrowserRouter>

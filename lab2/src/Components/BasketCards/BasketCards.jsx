@@ -14,7 +14,7 @@ export default function BasketCards({ cards, deleteFunction }) {
                             <img src={photo.image} className='imagewidth' alt="" />
                             <p className="title-card">{photo.title}</p>
                             <p className="price">{photo.price}</p>
-                            <button className='button-in-card delete-Button' onClick={deleteFunction}>
+                            <button className='button-in-card delete-Button' onClick={()=> deleteFunction(index)}>
                                 Delete from basket
                             </button>
                         </div>

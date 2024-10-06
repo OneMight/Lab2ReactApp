@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
 import Popup from 'reactjs-popup';
+
 export default function Cards({ addToBasket }) {
     const [arrayCards, setArray] = useState([]);
     const [titleinput, settitle] = useState('');
@@ -53,7 +54,9 @@ export default function Cards({ addToBasket }) {
                         <Popup trigger ={<button className='button-in-card open-redact-menu'>Redact</button>} modal nested>{
                             close=>(
                                 <div className='modal-image'>
-                                    <input type="button" onClick={() => close()}/>
+                                    <input type="button" onClick={() => close()}> 
+                                   
+                                    </input>
                                     <div>
                                         <p>select your image</p>
                                       <select id="selectimage" onChange={HandeSetImageCard}>
