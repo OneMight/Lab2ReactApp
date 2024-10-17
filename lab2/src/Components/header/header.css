@@ -138,7 +138,7 @@ nav > a{
     right: 20px;
     position: absolute;
     opacity: 0;
-    }
+}
 
     html{
         scroll-behavior: smooth;
@@ -185,6 +185,7 @@ nav > a{
         border-radius: 10px;
     }
     
+   
     .logout{
         text-align: center;
     }

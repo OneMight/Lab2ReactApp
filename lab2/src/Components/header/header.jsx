@@ -1,16 +1,19 @@
 import './header.css';
-import CustomizedBadges from '../MailIcon/MailIcon.jsx'
-
+import CustomizedBadges from '../MaterialUI/MailIcon/MailIcon.jsx'
+import SwitchTheme from '../MaterialUI/SwitchTheme/SwitchTheme.jsx'
 import Navmenu from '../Navmenu/navmenu.jsx';
-
+import SelectLanguge from '../MaterialUI/SelectLanguage/SelectLanguage.jsx'
 import { Link } from 'react-router-dom';
+import Button from '../MaterialUI/Button/button.jsx'
 import Popup from 'reactjs-popup';
+
 
 export default function Header({count}){
   
     return(
         <>
        <header>
+        
             <Link to='/'>
               
               <img id='logo' src="/images/logo.png" alt="" />
@@ -18,36 +21,15 @@ export default function Header({count}){
             <div className="nav_menu">
              <Navmenu/>
             </div>
-            <select name="" id="languageSelect">
-              <option value="en" id="translateEN" select="">
-                en
-              </option>
-              <option value="ru" id="translateRU">
-                ru
-              </option>
-            </select>
-            <div className="toogle-switch">
-              <label className="switch">
-                <input type="checkbox" id="check" />
-                <span className="slider round" />
-              </label>
-            </div>
+            <SelectLanguge/>
+            <SwitchTheme/>
             <div className="header-right">
               <p className="username" />
               <Link to='/Registration'>
-                <button id="Sign-up">
-                  <span className="signup">
-                  Sign Up
-                  </span>
-                </button>
+                <Button color='#FCF8F3' text='Sign up'/>
               </Link>
               <Link to="/Logining">
-                  <button id="Log-in">
-                    <span className="login">
-                    Log in
-                    </span>
-                
-                  </button>
+              <Button color='#FCF8F3' text='Log in'/>
               </Link>
               <button id="logout">
                 <span className="logout">
@@ -60,7 +42,7 @@ export default function Header({count}){
               <div className="basket">
                 <Popup trigger={
                   <button className='profile-open-button'>
-                  <CustomizedBadges count ={count}/>
+                  <CustomizedBadges count = {count}/>
                 </button>
                 } position={'bottom center'}>
                   <div className='Profile-container'>

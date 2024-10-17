@@ -4,7 +4,7 @@ import Shop from './Pages/ShopCards.jsx';
 import { useState} from 'react';
 import Main from './Pages/Main.jsx';
 import Regform from './Pages/Regform.jsx'
-
+import Logform from './Pages/LoginingForm.jsx'
 export default function App() {
     const [productCount, setProductCount] = useState(0);
     const [addedCards, setAddedCards] = useState([]);
@@ -47,6 +47,7 @@ export default function App() {
                 <Route path='/' element={<Main count={productCount} />} />
                 <Route path='/Basket' element={<Basket count={productCount} basketCards={addedCards} delete={onHandleDeleteproduct} />} />
                 <Route path='/Registration' element={<Regform/>}/>
+                <Route path='/Logining' element={<Logform/>}/>
             </Routes>
         </BrowserRouter>
     );
