@@ -1,5 +1,5 @@
 import './header.css';
-
+import CustomizedBadges from '../MailIcon/MailIcon.jsx'
 
 import Navmenu from '../Navmenu/navmenu.jsx';
 
@@ -12,7 +12,7 @@ export default function Header({count}){
         <>
        <header>
             <Link to='/'>
-              {/* <div id="logo"/> */}
+              
               <img id='logo' src="/images/logo.png" alt="" />
             </Link>
             <div className="nav_menu">
@@ -34,16 +34,21 @@ export default function Header({count}){
             </div>
             <div className="header-right">
               <p className="username" />
-              <button id="Sign-up">
-                <span className="signup">
-                Sign Up
-                </span>
-              </button>
-              <button id="Log-in">
-                <span className="login">
-                  Log in
-                </span>
-              </button>
+              <Link to='/Registration'>
+                <button id="Sign-up">
+                  <span className="signup">
+                  Sign Up
+                  </span>
+                </button>
+              </Link>
+              <Link to="/Logining">
+                  <button id="Log-in">
+                    <span className="login">
+                    Log in
+                    </span>
+                
+                  </button>
+              </Link>
               <button id="logout">
                 <span className="logout">
                   Log out
@@ -55,7 +60,7 @@ export default function Header({count}){
               <div className="basket">
                 <Popup trigger={
                   <button className='profile-open-button'>
-                  <img className="shoping" src='/images/shoping.svg' alt="" />
+                  <CustomizedBadges count ={count}/>
                 </button>
                 } position={'bottom center'}>
                   <div className='Profile-container'>

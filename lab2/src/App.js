@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Basket from './Pages/Basket.jsx';
 import Shop from './Pages/ShopCards.jsx';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import Main from './Pages/Main.jsx';
+import Regform from './Pages/Regform.jsx'
 
 export default function App() {
     const [productCount, setProductCount] = useState(0);
@@ -21,13 +22,13 @@ export default function App() {
     }
 
    const onHandleDeleteproduct = (id) =>{
-    const NewCards = addedCards.filter((Card, index) =>{
-        return index !==id
-    })
-    setAddedCards(NewCards);
-   
-    deleteCountOfProduct();
-}
+        const NewCards = addedCards.filter(( Card,index) =>{
+            return index !==id
+        })
+        setAddedCards(NewCards);
+    
+        deleteCountOfProduct();
+    }
       
 
     const onHandleAddItem = (id, image, title, price) => {
@@ -45,6 +46,7 @@ export default function App() {
                 <Route path='/shop' element={<Shop count={productCount} addToBasket={onHandleAddItem} />} />
                 <Route path='/' element={<Main count={productCount} />} />
                 <Route path='/Basket' element={<Basket count={productCount} basketCards={addedCards} delete={onHandleDeleteproduct} />} />
+                <Route path='/Registration' element={<Regform/>}/>
             </Routes>
         </BrowserRouter>
     );
