@@ -6,10 +6,10 @@ import SelectLanguge from '../MaterialUI/SelectLanguage/SelectLanguage.jsx'
 import { Link } from 'react-router-dom';
 import Button from '../MaterialUI/Button/button.jsx'
 import Popup from 'reactjs-popup';
+import { useSelector} from 'react-redux'
 
-
-export default function Header({count}){
-  
+export default function Header(){
+  const count = useSelector((state) => state.counter.value)
     return(
         <>
        <header>

@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
 import Popup from 'reactjs-popup';
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function Cards({ addToBasket }) {
     const [arrayCards, setArray] = useState([]);
     const [titleinput, settitle] = useState('');
     const [priceinput, setprice] = useState('');
     const [imageinput, setimage] = useState('');
-
+    const dispatch = useDispatch();
     useEffect(() => {
         const fetchCards = async () => {
             const response = await fetch('/Cards.json');
