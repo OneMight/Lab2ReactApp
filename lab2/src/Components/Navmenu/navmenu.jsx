@@ -15,9 +15,9 @@ export default function Navmenu(){
                         <p i18n ="about">Basket</p>
                         <img src='/images/mark.svg' alt=""/>
                     </Link>
-                    <Link to='/Questions'>
-                        <p i18n ="sustainability">Basic questions</p>
-                    </Link>
+                    <a id="sustainability" href="../Questions/Questions.html">
+                        <p i18n ="sustainability">Sustainability</p>
+                    </a>
                     <a id="checkusers" href="../Check All Users/checkallusers.html">
                         <p i18n="checkusers">Check all users</p>
                     </a>

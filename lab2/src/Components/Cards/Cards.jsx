@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
 import Popup from 'reactjs-popup';
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function Cards({ addToBasket }) {
     const [arrayCards, setArray] = useState([]);
     const [titleinput, settitle] = useState('');
     const [priceinput, setprice] = useState('');
     const [imageinput, setimage] = useState('');
-
+    const dispatch = useDispatch();
     useEffect(() => {
         const fetchCards = async () => {
             const response = await fetch('/Cards.json');
             const result = await response.json();
             setArray(result);
+            // dispatch(result);
         };
 
         fetchCards();
@@ -29,6 +31,9 @@ export default function Cards({ addToBasket }) {
 
         })
     }
+    // const HandleAddtoBasket =(id,title,price,image)=>{
+    //     dispatch(addCard({id, title,price, image}))
+    // }
     const HandleSetTitleCard =(e) =>{
         settitle(e.target.value);
     }
@@ -48,7 +53,7 @@ export default function Cards({ addToBasket }) {
                         <p className="title-card">{photo.title}</p>
                         <p className="price">{photo.price}</p>
                         <button className='button-in-card AddToBasket'
-                            onClick={() => addToBasket(photo.id,photo.image, photo.title, photo.price)}>
+                    >
                             Add to basket
                         </button>
                         <Popup trigger ={<button className='button-in-card open-redact-menu'>Redact</button>} modal nested>{
