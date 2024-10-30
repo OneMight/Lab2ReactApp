@@ -2,38 +2,44 @@ import './header.css';
 import CustomizedBadges from '../MaterialUI/MailIcon/MailIcon.jsx'
 import SwitchTheme from '../MaterialUI/SwitchTheme/SwitchTheme.jsx'
 import Navmenu from '../Navmenu/navmenu.jsx';
-import SelectLanguge from '../MaterialUI/SelectLanguage/SelectLanguage.jsx'
+
 import { Link } from 'react-router-dom';
 import Button from '../MaterialUI/Button/button.jsx'
 import Popup from 'reactjs-popup';
+import {useSelector} from 'react-redux'
+import {useTranslation} from "react-i18next";
+export default function Header(){
+  const {t,i18n} = useTranslation ();
+  const changelanguage = (language) => {
 
-
-export default function Header({count}){
-  
+    i18n.changeLanguage(language);
+  };
+  const countofproduct = useSelector(state=> state.cards.count)
     return(
         <>
-       <header>
-        
+       <header>   
             <Link to='/'>
-              
               <img id='logo' src="/images/logo.png" alt="" />
             </Link>
             <div className="nav_menu">
              <Navmenu/>
             </div>
-            <SelectLanguge/>
+            <select name="" id="" onChange={(e) => changelanguage(e.target.value)} defaultValue={i18n.language}>
+              <option value="en">en</option>
+              <option value="ru">ru</option>
+            </select>
             <SwitchTheme/>
             <div className="header-right">
               <p className="username" />
               <Link to='/Registration'>
-                <Button color='#FCF8F3' text='Sign up'/>
+                <Button color='#FCF8F3' text={t('Signup')}/>
               </Link>
               <Link to="/Logining">
-              <Button color='#FCF8F3' text='Log in'/>
+              <Button color='#FCF8F3' text={t("Login")}/>
               </Link>
               <button id="logout">
                 <span className="logout">
-                  Log out
+                  {t("Logout")}
                 </span>
               </button>
               <div>
@@ -42,19 +48,19 @@ export default function Header({count}){
               <div className="basket">
                 <Popup trigger={
                   <button className='profile-open-button'>
-                  <CustomizedBadges count = {count}/>
+                  <CustomizedBadges count = {countofproduct}/>
                 </button>
                 } position={'bottom center'}>
                   <div className='Profile-container'>
-                    <p>Количество покупок {count}</p>
+                    <p>{t("countofproducts")} {countofproduct}</p>
                     <Link to='/basket'>
-                    <button className='Lets-basket buttons-modal'>Перейти в корзину</button>
+                    <button className='Lets-basket buttons-modal'>{t("Gotobasket")}</button>
                     </Link>
-                    <Popup trigger={<button className='buttons-modal Exit-button'>Выйти</button>} modal nested>{
+                    <Popup trigger={<button className='buttons-modal Exit-button'>{t("Exit")}</button>} modal nested>{
                         close=>(
                           <div className='Modal-exit'>
-                            <p>Вы точно хотите выйти?</p>
-                            <button className='Confirm' onClick={()=> close()}>Да</button>
+                            <p>{t("AreYousure")}</p>
+                            <button className='Confirm' onClick={()=> close()}>{t("Yes")}</button>
                           </div>
                         ) 
                       }

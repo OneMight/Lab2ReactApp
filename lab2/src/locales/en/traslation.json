@@ -1,0 +1,61 @@
+
+{
+    
+    "Signup": "Sign up",
+    "Login": "Log in",
+    "Logout":"Log out",
+    "countofproducts":"count of products",
+    "Gotobasket": "Go to basket",
+    "Exit":"Exit",
+    "AreYousure":"Are you sure?",
+    "Yes":"Yes",
+    "navmenu":{
+        "Shop":"Shop",
+        "Basket":"Basket",
+        "Sustainability":"Sustainability",
+        "Checkallusers":"Check all users"
+    },
+    "Slider":{
+        "OurBestSellers":"Our Best Sellers",
+        "Deliverasmile":"Deliver a smile to yourself or someone special with one of our sustainable favorites.",
+        "Shopallproducts":"Shop all products"
+    },
+    "footer":{
+
+            "Shop":"Shop",
+            "Shop all":"Shop all",
+            "Greeting Cards":"Greeting Cards",
+            "Assorted Cards Sets":"Assorted Cards Sets",
+            "Notebooks":"Notebooks",
+            "About":"About",
+            "Our story":"Our story",
+            "Our Values":"Our Values",
+            "Journal":"Journal",
+            "Sustainability":"Sustainability",
+            "Customer Care":"Customer Care",
+            "About Us":"About Us",
+            "FAQs":"FAQs",
+            "Return & Exchanges":"Return & Exchanges",
+            "Support":"Support",
+            "Wholesales":"Wholesales",
+            "Overview":"Overview",
+            "Register as a Wholesales":"Register as a Wholesales",
+            "Access the Wholesales Store":"Access the Wholesales Store",
+            "Twigs Paper":"© 2021 Twigs Paper. All Rights Reserved.",
+            "Privacy Policy":"Privacy Policy",
+            "Terms & Conditions":"Terms & Conditions",
+            "Built by The Papestielliz":"Built by The Papestiellizz"
+    },
+    "Basket":{
+        "Basket":"Basket",
+        "Nothing in Basket":"Nothing in Basket",
+        "Delete from basket":"Delete from basket"
+    },
+    "Shop":{
+        "Add to basket":"Add to basket",
+        "Redact":"Redact",
+        "select your image":"select your image",
+        "Write title of the card":"Write title of the card",
+        "Lets set a price":"Let's set a price"
+    }
+}

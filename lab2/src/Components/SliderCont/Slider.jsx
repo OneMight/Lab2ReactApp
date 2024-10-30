@@ -3,8 +3,10 @@ import './Slider.css'
 import { Link } from 'react-router-dom';
 import { useEffect } from "react";
 import { useState } from 'react';
+import {useTranslation} from "react-i18next";
 export default function Slider(){
 
+  const {t} = useTranslation ();
     
 
     useEffect(() =>{
@@ -78,15 +80,14 @@ export default function Slider(){
         <div className="container-cards box unauthotized">
         <div className="text-and-button box">
                 <div>
-                    <p className="title-contaner "> Our Best Sellers</p>
+                    <p className="title-contaner ">{t("Slider.OurBestSellers")}</p>
                     <p className="text-title ">
-                        Deliver a smile to yourself or someone special
-                        with one of our sustainable favorites.
+                        {t('Slider.Deliverasmile')}
                     </p>
                 </div>
                 
                 <Link to='/shop' id="shop-all">
-                    <span className=" shopAllProducts">Shop all products</span> 
+                    <span className=" shopAllProducts">{t('Slider.Shopallproducts')}</span> 
                     <img src="../images/row.svg" alt=""/>
                 </Link>
                
