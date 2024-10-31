@@ -54,6 +54,8 @@
         "Redact":"Отредактировать",
         "select your image":"Выбери картинку",
         "Write title of the card":"Заголовок открытки",
-        "Lets set a price":"Выставь цену"
+        "Lets set a price":"Выставь цену",
+        "Filter":"Фильтр",
+        "Input":"Ввод...."
     }
 }

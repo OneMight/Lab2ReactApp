@@ -56,6 +56,8 @@
         "Redact":"Redact",
         "select your image":"select your image",
         "Write title of the card":"Write title of the card",
-        "Lets set a price":"Let's set a price"
+        "Lets set a price":"Let's set a price",
+        "Filter":"filter",
+        "Input":"Input...."
     }
 }

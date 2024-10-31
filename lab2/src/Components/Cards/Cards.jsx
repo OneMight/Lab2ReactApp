@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import './Cards.css';
 import Popup from 'reactjs-popup';
-import { useSelector, useDispatch } from 'react-redux'
+import {  useDispatch } from 'react-redux'
 import { useTranslation} from 'react-i18next';
 import { addCard,increment,updateCard,setallitems } from '../../store/actions/cardsSlicer';
-import Input from '../MaterialUI/Inputs/input'
-import Button from '../MaterialUI/Button/button'
+
 export default function Cards() {
     const {t} = useTranslation();
     const [arrayCards, setArray] = useState([]);
     const [titleinput, settitle] = useState('');
     const [priceinput, setprice] = useState('');
     const [imageinput, setimage] = useState('');
+    const [getinput, setinput] = useState('');
+    const [filteredCards, setFilteredCards] = useState([]);
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -20,9 +21,12 @@ export default function Cards() {
             const result = await response.json();
             setArray(result);
             dispatch(setallitems(result))
+            setFilteredCards(result)
         };
-
+       
         fetchCards();
+        
+
      
     }, []);
     const HandeUpdateCard = (id) => {
@@ -41,13 +45,34 @@ export default function Cards() {
     const HandeSetImageCard = (e) =>{
         setimage(e.target.value);
     }
-    
+    const HandlegetInput = (e) =>{
+        setinput(e.target.value)
+        if(e.target.value===''){
+            setFilteredCards(arrayCards)
+        }
+        else{
+            const SearchCards = arrayCards.filter(item => item.title.toLowerCase().includes(getinput.toLowerCase()))
+            setFilteredCards(SearchCards)
+        }
+   
+    }
+
+    const SortItemsById = () =>{
+        const sorted = [...arrayCards].sort((a, b) => a.id - b.id);
+        setFilteredCards(sorted);
+        
+    }
+  
+
     return (
         <div className="Container-for-cards">
-            <Input param={"input something..."}></Input>
-            <Button text={"Search"} color={"#FCF8F3"}></Button>
+            <div className='search-filter'>
+
+                <input type="text" placeholder={t('Shop.Input')} onChange={HandlegetInput}/>
+                <button className='Search-button' onClick={()=>SortItemsById()}>{t('Shop.Filter')}</button>
+            </div>
             <div className='Container-for-images'>
-                {arrayCards.map(photo => (
+                {filteredCards.map(photo => (
                     <div className="images" key={photo.id}>
                         <img src={photo.image} className='imagewidth' alt="" />
                         <p className="title-card">{photo.title}</p>
