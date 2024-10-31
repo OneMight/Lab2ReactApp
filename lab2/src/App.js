@@ -5,6 +5,7 @@ import { useState} from 'react';
 import Main from './Pages/Main.jsx';
 import Regform from './Pages/Regform.jsx'
 import Logform from './Pages/LoginingForm.jsx'
+import UsersPage from './Pages/UsersPage.jsx';
 export default function App() {
     const [productCount, setProductCount] = useState(0);
     const [addedCards, setAddedCards] = useState([]);
@@ -48,6 +49,7 @@ export default function App() {
                 <Route path='/Basket' element={<Basket count={productCount} basketCards={addedCards} delete={onHandleDeleteproduct} />} />
                 <Route path='/Registration' element={<Regform/>}/>
                 <Route path='/Logining' element={<Logform/>}/>
+                <Route path='Sustainability' element={<UsersPage/>}></Route>
             </Routes>
         </BrowserRouter>
     );

@@ -2,16 +2,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const userSlicer =createSlice({
-    name: 'cards',
+    name: 'users',
     initialState: {
-        users: [],
+        items: [],
         allusers:[],
         count: 0,
         error: null,
     },
     reducers: {
         setallusers:(state,action) => {
-            state.allitems.push(action.payload)
+            state.allusers.push(action.payload)
         },
         addUser: (state, action) => {
             const newCard = action.payload;
@@ -20,14 +20,14 @@ const userSlicer =createSlice({
             
         },
         removeUser:(state,action)=>{
-           state.items = state.items.filter((obj) => obj.id !== action.payload.id)
+            state.items = state.items.filter((obj) => obj.name !== action.payload.name);
            
         },
         updateUser:(state,action)=>{
             const { id, updatedData } = action.payload;
-            const CardIndex = state.items.findIndex(card => card.id === id);
-            if (CardIndex >= 0) {
-                state.items[CardIndex] = { ...state.items[CardIndex], ...updatedData };
+            const userIndex = state.items.findIndex(user => user.id === id);
+            if (userIndex >= 0) {
+                state.items[userIndex] = { ...state.items[userIndex], ...updatedData };
                 state.error = null;
             } else {
                 state.error = 'Card no found';

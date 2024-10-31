@@ -57,5 +57,18 @@
         "Lets set a price":"Выставь цену",
         "Filter":"Фильтр",
         "Input":"Ввод...."
+    },
+    "Users":{
+        "Input name of user":"Введите имя пользователя",
+        "Add user":"Добавить",
+        "You dont fill field":"Заполните поле",
+        "User is already added":"Пользователь с таким именем уже существует",
+        "Filter by name":"Отсортировать по имени",
+        "User not added":"Нет добавленных пользователей",
+        "Nameofuser":"Имя пользователя",
+        "Delete":"Удалить",
+        "Redact":"Отредактировать",
+        "You have max":"Вы достигли лимита символов"
     }
+    
 }

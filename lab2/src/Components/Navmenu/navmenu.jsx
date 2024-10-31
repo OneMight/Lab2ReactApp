@@ -16,9 +16,9 @@ export default function Navmenu(){
                         <p i18n ="about">{t('navmenu.Basket')}</p>
                         <img src='/images/mark.svg' alt=""/>
                     </Link>
-                    <a id="sustainability" href="../Questions/Questions.html">
+                   <Link to='/sustainability'>
                         <p i18n ="sustainability">{t('navmenu.Sustainability')}</p>
-                    </a>
+                   </Link>
                     <a id="checkusers" href="../Check All Users/checkallusers.html">
                         <p i18n="checkusers">{t('navmenu.Checkallusers')}</p>
                     </a>

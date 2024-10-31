@@ -59,5 +59,17 @@
         "Lets set a price":"Let's set a price",
         "Filter":"filter",
         "Input":"Input...."
+    },
+    "Users":{
+        "Input name of user":"Input name of user",
+        "Add user":"Add user",
+        "You dont fill field":"You dont fill field",
+        "User is already added":"User is already added",
+        "Filter by name":"Filter by name",
+        "User not added":"User not added",
+        "Nameofuser":"Name of user",
+        "Delete":"Delete",
+        "Redact":"Redact",
+        "You have max":"You have max symbols in username"
     }
 }
