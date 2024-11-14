@@ -1,0 +1,74 @@
+
+{
+    "Signup": "Регистрация",
+    "Login": "Вход",
+    "Logout":"Выход",
+    "countofproducts":"Количество товаров",
+    "Gotobasket": "В корзину",
+    "Exit":"Выход",
+    "AreYousure":"Вы уверены?",
+    "Yes":"Да",
+    "navmenu":{
+        "Shop":"Магазин",
+        "Basket":"Корзина",
+        "Sustainability":"О нас",
+        "Checkallusers":"Все пользователи"
+    },
+    "Slider":{
+        "OurBestSellers":"Лучшие продажи",
+        "Deliverasmile":"Подарите улыбку себе или близкому человеку с помощью одного из наших экологически чистых фаворитов.",
+        "Shopallproducts":"В магазин"
+    },
+    "footer":{
+        "Shop":"Магазин",
+        "Shop all":"Магазин",
+        "Greeting Cards":"Поздравительные открытки",
+        "Assorted Cards Sets":"Ассорти из наборов карточек",
+        "Notebooks":"Открытки",
+        "About":"О нас",
+        "Our story":"Наша история",
+        "Our Values":"Наша значимость",
+        "Journal":"Журнал",
+        "Sustainability":"О нас",
+        "Customer Care":"Служба поддержки клиентов",
+        "About Us":"О нас",
+        "FAQs":"FAQs",
+        "Return & Exchanges":"Возврат",
+        "Support":"Поддержка",
+        "Wholesales":"Оптовые продажи",
+        "Overview":"Обзор",
+        "Register as a Wholesales":"Зарегистрируйтесь как оптовик",
+        "Access the Wholesales Store":"Доступ к оптовому магазину",
+        "Twigs Paper":"© 2021 Twigs Paper. Все права защищены.",
+        "Privacy Policy":"Политика конфиденциальности",
+        "Terms & Conditions":"Условия",
+        "Built by The Papestielliz":"Разработанно Papestielliz"
+    },
+    "Basket":{
+        "Basket":"Корзина",
+        "Nothing in Basket":"Упс... Здесь пусто",
+        "Delete from basket":"Удалить"
+    },
+    "Shop":{
+        "Add to basket":"Добавить в корзину",
+        "Redact":"Отредактировать",
+        "select your image":"Выбери картинку",
+        "Write title of the card":"Заголовок открытки",
+        "Lets set a price":"Выставь цену",
+        "Filter":"Фильтр",
+        "Input":"Ввод...."
+    },
+    "Users":{
+        "Input name of user":"Введите имя пользователя",
+        "Add user":"Добавить",
+        "You dont fill field":"Заполните поле",
+        "User is already added":"Пользователь с таким именем уже существует",
+        "Filter by name":"Отсортировать по имени",
+        "User not added":"Нет добавленных пользователей",
+        "Nameofuser":"Имя пользователя",
+        "Delete":"Удалить",
+        "Redact":"Отредактировать",
+        "You have max":"Вы достигли лимита символов"
+    }
+    
+}

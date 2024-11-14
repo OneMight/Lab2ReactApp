@@ -1,0 +1,152 @@
+.container-cards{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 290px;
+    overflow-x: hidden;
+
+}
+
+.title-contaner{
+    font-size: 40px;
+    margin: 35px 0;
+    word-spacing: 2px;
+   
+}
+.text-title{
+    line-height: 150%;
+    word-spacing: 1px;
+    font-size: 15px;
+}
+
+#shop-all{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 75%;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    height: 47px;
+    background-color:#212806;
+    border:1px solid #212806;
+    border-radius:30px;
+    color:#FCF8F3;
+    text-decoration:none;
+
+}
+
+.text-and-button{
+    width: 20%;
+    height: 502px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    padding-left: 70px;
+    flex-direction: column;
+    align-items: center;
+    background-color:#ffffff;
+    z-index: 3;
+}
+
+.Arrows{
+    width: 85%;
+    margin-bottom: 8px;
+}
+
+#arrow-left{
+    border:none;
+    background-color:#ffffff;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#arrow-right{
+    border:none;
+    background-color:#ffffff;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.container-slider{
+
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.title-card{
+    font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.name-card{
+    width: 90%;
+    line-height: 120%;
+    font-size: 23px;
+    word-spacing: 1px;
+    margin: 0;
+}
+.price{
+    font-size: 16px;
+    margin: 0;
+}
+
+.slider-images{
+    z-index: 1;
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+   flex-wrap: nowrap;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    width: auto;
+    gap: 16px;
+    height: 450px;
+}
+
+@media screen and (max-width: 768px){
+
+    
+       .text-and-button{
+        padding: 0 20px;
+        width: 40%;
+      }
+      .container-slider{
+        width: 100%;
+      }
+      #shop-all{
+        width: 200px;
+      }
+}
+
+@media screen and (max-width: 500px){
+    .container-slider{
+        width: 100%;
+    }
+    .container-cards{
+        flex-direction: column;
+      }
+    .Arrows{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .text-and-button{
+        text-align: center;
+        justify-content: space-around;
+        width: 95%;
+      }
+}
